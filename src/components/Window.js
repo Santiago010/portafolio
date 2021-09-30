@@ -1,30 +1,47 @@
 import React from "react";
-import BaseWindow from "./BaseWindow";
-import My from "../assets/My.jpg";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { typesWindow } from "../types/typesWindow";
 
-const Window = () => {
-  return (
-    <BaseWindow>
-      <div className="window__content">
-        <img src={My} alt="" className="image-presentation" />
-        <h2>!Hola a todos!</h2>
-        <h1>Soy Santiago</h1>
-        <p>
-          Un Front-end Developer que le fascina ser perspicaz con los detalles
-          de una UI O UX
-        </p>
-        <nav className="nav-presentation">
-          <Link to="/" className="links-presentation">
-            <i class="fab fa-github"></i>
-          </Link>
-          <Link to="/" className="links-presentation">
-            <i class="fab fa-linkedin-in"></i>
-          </Link>
-        </nav>
-      </div>
-    </BaseWindow>
-  );
+import BaseWindow from "./BaseWindow";
+
+import WindowContact from "./WindowContact";
+import WindowAboutMe from "./WindowAboutMe";
+import WindowProjects from "./WindowProjects";
+
+const Window = ({ windowToShow }) => {
+  if (windowToShow === typesWindow.windowAboutMe) {
+    return (
+      <BaseWindow>
+        <div className="window__content">
+          <WindowAboutMe />
+        </div>
+      </BaseWindow>
+    );
+  }
+
+  if (windowToShow === typesWindow.windowContact) {
+    return (
+      <BaseWindow>
+        <div className="window__content">
+          <WindowContact />
+        </div>
+      </BaseWindow>
+    );
+  }
+
+  if (windowToShow === typesWindow.windowProjects) {
+    return (
+      <BaseWindow>
+        <div className="window__content">
+          <WindowProjects />
+        </div>
+      </BaseWindow>
+    );
+  }
+};
+
+Window.propTypes = {
+  windowToShow: PropTypes.string.isRequired,
 };
 
 export default Window;

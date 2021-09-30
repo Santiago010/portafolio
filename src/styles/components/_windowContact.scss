@@ -1,0 +1,45 @@
+.windowContact__form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 0;
+}
+
+.windowContact__input {
+  margin: 0.3em 0;
+  outline: none;
+  padding: 0.8em;
+  font-size: 1em;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: $font-app;
+  transition-property: background;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+
+  &:focus {
+    background: rgba(0, 0, 0, 0.35);
+  }
+  &::-webkit-scrollbar {
+    width: 0.3em;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 5px;
+  }
+}
+
+.windowContact__textarea {
+  resize: none;
+  overflow: auto;
+}
+
+.windowContact__submit {
+  cursor: pointer;
+}
