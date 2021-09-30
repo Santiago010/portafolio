@@ -1,0 +1,64 @@
+.lock {
+  background: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.lock__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lock__image-profile {
+  font-size: 6em;
+  margin-bottom: 16px;
+}
+
+.lock__name {
+  font-size: 1.5em;
+}
+
+.lock__form {
+  margin-top: 16px;
+
+  input,
+  button {
+    outline: none;
+  }
+}
+
+.glass-background {
+  padding: 0.8em;
+  background: rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.lock__input {
+  font-family: $font-app;
+  transition-property: background;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  &:focus {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.lock__btn {
+  cursor: pointer;
+  transition-property: background;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
