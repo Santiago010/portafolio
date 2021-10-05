@@ -1,14 +1,21 @@
 import { types } from "../types/types";
 
-export const setWindowProjects = () => ({
-  type: types.setWindowProjects,
+export const startWindow = (window) => {
+  return (dispatch) => {
+    dispatch(toggleWindowActive(window));
+    dispatch(setWindow(window));
+  };
+};
+
+export const setWindow = (window) => ({
+  type: types.setWindow,
+  payload: window,
 });
-export const setWindowAboutMe = () => ({
-  type: types.setWindowAboutMe,
-});
-export const setWindowCV = () => ({
-  type: types.setWindowCV,
-});
-export const setWindowContact = () => ({
-  type: types.setWindowContact,
-});
+export const toggleWindowActive = (window) => {
+  console.log(window);
+
+  return {
+    type: types.toggleWindowActive,
+    payload: window,
+  };
+};

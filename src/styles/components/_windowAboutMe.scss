@@ -1,16 +1,21 @@
 .windowAboutMe__image {
-  width: 50%;
+  width: 40%;
   object-fit: cover;
   border-radius: 10%;
   user-select: none;
 }
 
+h2,
+h1,
+p {
+  color: $color-font2;
+}
 .windowAboutMe__links {
   list-style: none;
-  color: #000000;
   font-size: 1.5em;
   margin: 0 0.5em;
-  border: 1px solid #000;
+  color: $color-font2;
+  border: 1px solid $color-font2;
   padding: 0.3em;
   border-radius: 5px;
 }

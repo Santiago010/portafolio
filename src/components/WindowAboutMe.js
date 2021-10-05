@@ -14,6 +14,7 @@ const WindowAboutMe = () => {
       <nav className="windowAboutMe__nav">
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://github.com/Santiago010"
           className="windowAboutMe__links"
         >
@@ -21,6 +22,7 @@ const WindowAboutMe = () => {
         </a>
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://www.linkedin.com/in/santiago-ortiz-llanos-308739201/"
           className="windowAboutMe__links"
         >

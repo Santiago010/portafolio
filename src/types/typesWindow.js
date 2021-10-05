@@ -1,6 +1,14 @@
+// export const typesWindow = {
+//   windowProjects: "windowProjects",
+//   windowAboutMe: "windowAboutMe",
+//   windowCV: "windowCV",
+//   windowContact: "windowContact",
+// };
+
 export const typesWindow = {
-  windowProjects: "windowProjects",
-  windowAboutMe: "windowAboutMe",
-  windowCV: "windowCV",
-  windowContact: "windowContact",
+  profile: "profile",
+  projects: "projects",
+  contact: "contact",
+  CV: "CV",
+  welcome: "welcome",
 };

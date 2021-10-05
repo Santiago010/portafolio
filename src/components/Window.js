@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { typesWindow } from "../types/typesWindow";
 
@@ -7,11 +7,19 @@ import BaseWindow from "./BaseWindow";
 import WindowContact from "./WindowContact";
 import WindowAboutMe from "./WindowAboutMe";
 import WindowProjects from "./WindowProjects";
+import { useDispatch } from "react-redux";
+import { toggleWindowActive } from "../actions/windowsActions";
 
 const Window = ({ windowToShow }) => {
-  if (windowToShow === typesWindow.windowAboutMe) {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    return () => {
+      dispatch(toggleWindowActive(null));
+    };
+  }, [dispatch, windowToShow]);
+  if (windowToShow === typesWindow.profile) {
     return (
-      <BaseWindow>
+      <BaseWindow windowToShow={windowToShow}>
         <div className="window__content">
           <WindowAboutMe />
         </div>
@@ -19,9 +27,9 @@ const Window = ({ windowToShow }) => {
     );
   }
 
-  if (windowToShow === typesWindow.windowContact) {
+  if (windowToShow === typesWindow.contact) {
     return (
-      <BaseWindow>
+      <BaseWindow windowToShow={windowToShow}>
         <div className="window__content">
           <WindowContact />
         </div>
@@ -29,9 +37,9 @@ const Window = ({ windowToShow }) => {
     );
   }
 
-  if (windowToShow === typesWindow.windowProjects) {
+  if (windowToShow === typesWindow.projects) {
     return (
-      <BaseWindow>
+      <BaseWindow windowToShow={windowToShow}>
         <div className="window__content">
           <WindowProjects />
         </div>

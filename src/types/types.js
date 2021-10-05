@@ -6,8 +6,6 @@ export const types = {
   dataProjects: "[Projects] upload Projects",
 
   // windows
-  setWindowProjects: "[Window] set Window Projects",
-  setWindowAboutMe: "[Window] set Window About Me",
-  setWindowCV: "[Window] set Window CV",
-  setWindowContact: "[Window] set Window Contact",
+  toggleWindowActive: "[Window] Toggle Window Active",
+  setWindow: "[Window set Window]",
 };

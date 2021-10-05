@@ -1,33 +1,49 @@
 import { types } from "../types/types";
 
 const initialState = {
-  windowProjects: false,
-  windowAboutMe: false,
-  windowCV: false,
-  windowContact: false,
+  windows: [
+    {
+      name: "profile",
+      open: false,
+    },
+    {
+      name: "projects",
+      open: false,
+    },
+    {
+      name: "contact",
+      open: false,
+    },
+    {
+      name: "CV",
+      open: false,
+    },
+    {
+      name: "welcome",
+      open: true,
+    },
+  ],
+  windowActive: null,
 };
 
 export const windowsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case types.setWindowProjects:
+    case types.toggleWindowActive:
       return {
         ...state,
-        windowProjects: !state.windowProjects,
+        windowActive: action.payload,
       };
-    case types.setWindowAboutMe:
+    case types.setWindow:
       return {
         ...state,
-        windowAboutMe: !state.windowAboutMe,
-      };
-    case types.setWindowCV:
-      return {
-        ...state,
-        windowCV: !state.windowCV,
-      };
-    case types.setWindowContact:
-      return {
-        ...state,
-        windowContact: !state.windowContact,
+        windows: state.windows.map((w) =>
+          w.name === action.payload
+            ? {
+                name: w.name,
+                open: !w.open,
+              }
+            : w
+        ),
       };
     default:
       return state;
