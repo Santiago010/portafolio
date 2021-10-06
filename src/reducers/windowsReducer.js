@@ -15,12 +15,12 @@ const initialState = {
       open: false,
     },
     {
-      name: "CV",
+      name: "about",
       open: false,
     },
     {
       name: "welcome",
-      open: true,
+      open: false,
     },
   ],
   windowActive: null,

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Loader from "./Loader";
 
 const WindowProjects = () => {
-  const { projects } = useSelector((state) => state.dataProjectReducer);
+  const { projects } = useSelector((state) => state.uiReducer);
   if (!projects) {
     return <Loader />;
   }
@@ -25,6 +25,10 @@ const WindowProjects = () => {
               href={url}
               rel="noreferrer"
             >
+              <span
+                className="iconify"
+                data-icon="fa-solid:project-diagram"
+              ></span>
               ver projecto
             </a>
             <a
@@ -33,7 +37,10 @@ const WindowProjects = () => {
               href={github}
               rel="noreferrer"
             >
-              <i className="fab fa-github"></i>
+              <span
+                className="iconify"
+                data-icon="akar-icons:github-fill"
+              ></span>
               ver codigo
             </a>
           </nav>

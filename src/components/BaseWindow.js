@@ -5,19 +5,18 @@ import { setWindow, toggleWindowActive } from "../actions/windowsActions";
 import RandomNumber from "../helpers/RandomNumber";
 import useCounter from "../hooks/useCounter";
 
-const initialSize = {
-  width: 500,
-  height: 600,
-};
-
 const BaseWindow = ({ children, windowToShow }) => {
+  const { dimensionMain } = useSelector((state) => state.uiReducer);
   const refNumberRamdon = useRef({
-    top: RandomNumber(100, 0),
-    left: RandomNumber(100, 0),
+    top: RandomNumber(dimensionMain.height / 10, 0),
+    left: RandomNumber(dimensionMain.width / 2, 0),
   });
   const { counter, increment, reset } = useCounter(0);
 
-  const [windowResize, setWindowResize] = useState(initialSize);
+  const [windowResize, setWindowResize] = useState({
+    width: dimensionMain.width / 2,
+    heigth: dimensionMain.height / 2,
+  });
   const [positionWindow, setpositionWindow] = useState({
     top: 0,
     left: 0,
@@ -47,10 +46,17 @@ const BaseWindow = ({ children, windowToShow }) => {
       increment();
     } else {
       setpositionWindow(refNumberRamdon.current);
-      setWindowResize(initialSize);
+      setWindowResize({
+        width: dimensionMain.width / 2,
+        heigth: dimensionMain.height / 2,
+      });
       reset();
     }
   };
+
+  useEffect(() => {
+    console.log(windowResize);
+  }, [windowResize]);
 
   useEffect(() => {
     setpositionWindow(refNumberRamdon.current);
@@ -78,21 +84,28 @@ const BaseWindow = ({ children, windowToShow }) => {
         height: windowResize.height,
       }}
       size={windowResize}
-      minHeight={windowResize.height / 2}
+      minHeight={dimensionMain.height / 4}
       maxHeight="100%"
       maxWidth="100%"
-      minWidth={windowResize.width / 2}
+      minWidth={dimensionMain.width / 4}
     >
       <div>
         <header className="basewindow__header">
           <div
             className="basewindow__actions actions-close"
             onClick={(ev) => handleClose(ev, windowToShow)}
-          ></div>
+          >
+            X
+          </div>
           <div
             className="basewindow__actions actions-resize"
             onClick={handleResize}
-          ></div>
+          >
+            <span
+              className="iconify icon__square"
+              data-icon="akar-icons:square"
+            ></span>
+          </div>
         </header>
         {children}
       </div>

@@ -17,3 +17,11 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+h2,
+h1,
+p,
+input,
+textarea {
+  color: $color-font;
+}

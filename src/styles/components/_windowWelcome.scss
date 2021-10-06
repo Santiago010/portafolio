@@ -1,0 +1,45 @@
+.wrapper {
+  height: 100%;
+  margin: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  color: $color-font;
+  width: 100%;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 2.5em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.windowWelcome__i {
+  padding: 2em 1em;
+  margin-top: 2em;
+  color: $color-font;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  letter-spacing: -1px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px 0 $boxshadowapp;
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  border-radius: $borderradiusapp;
+  border: 1px solid $colorborderapp;
+}

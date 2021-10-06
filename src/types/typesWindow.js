@@ -9,6 +9,6 @@ export const typesWindow = {
   profile: "profile",
   projects: "projects",
   contact: "contact",
-  CV: "CV",
+  about: "about",
   welcome: "welcome",
 };

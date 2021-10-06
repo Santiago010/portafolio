@@ -9,8 +9,10 @@ import WindowAboutMe from "./WindowAboutMe";
 import WindowProjects from "./WindowProjects";
 import { useDispatch } from "react-redux";
 import { toggleWindowActive } from "../actions/windowsActions";
+import WindowWelcome from "./WindowWelcome";
+import WindowInfo from "./WindowInfo";
 
-const Window = ({ windowToShow }) => {
+const Window = ({ windowToShow, dimesionesMain }) => {
   const dispatch = useDispatch();
   useEffect(() => {
     return () => {
@@ -19,7 +21,7 @@ const Window = ({ windowToShow }) => {
   }, [dispatch, windowToShow]);
   if (windowToShow === typesWindow.profile) {
     return (
-      <BaseWindow windowToShow={windowToShow}>
+      <BaseWindow dimesionesMain={dimesionesMain} windowToShow={windowToShow}>
         <div className="window__content">
           <WindowAboutMe />
         </div>
@@ -29,7 +31,7 @@ const Window = ({ windowToShow }) => {
 
   if (windowToShow === typesWindow.contact) {
     return (
-      <BaseWindow windowToShow={windowToShow}>
+      <BaseWindow dimesionesMain={dimesionesMain} windowToShow={windowToShow}>
         <div className="window__content">
           <WindowContact />
         </div>
@@ -39,9 +41,29 @@ const Window = ({ windowToShow }) => {
 
   if (windowToShow === typesWindow.projects) {
     return (
-      <BaseWindow windowToShow={windowToShow}>
+      <BaseWindow dimesionesMain={dimesionesMain} windowToShow={windowToShow}>
         <div className="window__content">
           <WindowProjects />
+        </div>
+      </BaseWindow>
+    );
+  }
+
+  if (windowToShow === typesWindow.welcome) {
+    return (
+      <BaseWindow dimesionesMain={dimesionesMain} windowToShow={windowToShow}>
+        <div className="window__content">
+          <WindowWelcome />
+        </div>
+      </BaseWindow>
+    );
+  }
+
+  if (windowToShow === typesWindow.about) {
+    return (
+      <BaseWindow dimesionesMain={dimesionesMain} windowToShow={windowToShow}>
+        <div className="window__content">
+          <WindowInfo />
         </div>
       </BaseWindow>
     );

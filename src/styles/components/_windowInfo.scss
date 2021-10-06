@@ -1,0 +1,41 @@
+.windowInfo__title {
+  margin: 1em 0em;
+}
+
+.windowInfo__containermain {
+  display: flex;
+  justify-content: space-around;
+  padding: 0em 0.5em;
+}
+
+.windowInfo__containermain {
+  img {
+    border: 0.5em solid $colorborderapp;
+    width: 30%;
+    object-fit: cover;
+
+    border-radius: 50%;
+  }
+}
+
+.windowInfo__boxinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  small {
+    margin-bottom: 2.5em;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      font-size: 1.1em;
+    }
+  }
+}
+
+.copyrigth {
+  align-self: flex-end;
+}

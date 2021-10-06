@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { startLoggedInUser } from "../actions/authActions";
+import { startMsgError } from "../actions/uiActions";
+import ParagraphError from "../components/ParagraphError";
 import useForm from "../hooks/useForm";
 
 export const LookScreen = () => {
   const dispatch = useDispatch();
-  const [msgError, setMsgError] = useState(null);
+  const { msgError } = useSelector((state) => state.uiReducer);
 
   const [values, handleInputChange, resetValues] = useForm({
     nameUser: "",
@@ -17,26 +20,23 @@ export const LookScreen = () => {
     e.preventDefault();
 
     if (nameUser.trim().length < 3) {
-      setMsgError("debes ingresar un nombre valido");
+      dispatch(startMsgError("¡Debes ingresar un nombre valido!"));
       return;
     }
     dispatch(startLoggedInUser(nameUser));
     resetValues();
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      setMsgError(null);
-    }, 6000);
-  }, [msgError]);
-
   return (
     <main className="lock animate__animated animate__backInDown">
       <div className="lock__container">
         <h1 className="lock__title">¡Hola! Bienvenido a mi portafolio</h1>
         <p className="lock__paragraph">Ingresa tu nombre para continuar</p>
-        <i className="fas fa-user-circle lock__image-profile"></i>
-        {nameUser && <span className="lock__name">{nameUser}</span>}
+        <span
+          className="iconify lock__image-profile"
+          data-icon="et:profile-male"
+        ></span>
+        {nameUser && <p className="lock__name">{nameUser}</p>}
 
         <form className="lock__form" onSubmit={handleSubmit}>
           <input
@@ -48,14 +48,13 @@ export const LookScreen = () => {
             placeholder="Nombre: "
           />
           <button type="submit" className="lock__btn glass-background">
-            <i className="fas fa-arrow-right"></i>
+            <span
+              className="iconify"
+              data-icon="ant-design:arrow-right-outlined"
+            ></span>
           </button>
         </form>
-        {msgError && (
-          <p className="lock__error  animate__animated animate__pulse">
-            {msgError}
-          </p>
-        )}
+        {msgError && <ParagraphError msgError={msgError} />}
       </div>
     </main>
   );

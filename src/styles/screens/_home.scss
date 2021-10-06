@@ -25,6 +25,12 @@
   font-size: 1.1em;
 }
 
+.spancoffe__info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 .home__main {
   width: 100%;
   height: 87%;
@@ -32,6 +38,8 @@
 }
 
 .home__footer {
+  display: flex;
+  align-items: center;
   background: rgba(0, 0, 0, 0.6);
   box-shadow: 0 8px 32px 0 $boxshadowapp;
   backdrop-filter: blur(10.5px);
@@ -50,8 +58,7 @@
 
 .home__icons {
   margin: 0.5em 1em;
-  width: 60px;
-  height: 60px;
+  height: 80%;
   object-fit: contain;
   cursor: pointer;
   transition-property: filter;

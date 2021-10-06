@@ -43,3 +43,9 @@
 .windowContact__submit {
   cursor: pointer;
 }
+
+.windowContact__submit:hover {
+  color: $color-font2;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: $borderradiusapp;
+}

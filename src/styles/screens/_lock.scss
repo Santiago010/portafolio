@@ -27,6 +27,7 @@
 }
 
 .lock__image-profile {
+  color: $color-font;
   font-size: 6em;
   margin-bottom: 16px;
 }
@@ -44,20 +45,13 @@
   }
 }
 
-.lock__error {
-  color: #ff2626;
-  font-size: 1.2em;
-  margin: 0.5em;
-  text-align: center;
-}
-
 .glass-background {
   padding: 0.8em;
   background: $backgroundapp;
   box-shadow: 0 8px 32px 0 $boxshadowapp;
   backdrop-filter: blur(10.5px);
   -webkit-backdrop-filter: blur(10.5px);
-  border-radius: 10px;
+  border-radius: $borderradiusapp;
   border: 1px solid $colorborderapp;
 }
 
@@ -72,6 +66,7 @@
 }
 
 .lock__btn {
+  color: $color-font;
   cursor: pointer;
   transition-property: background;
   transition-duration: 0.2s;

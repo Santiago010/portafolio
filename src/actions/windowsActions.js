@@ -11,11 +11,7 @@ export const setWindow = (window) => ({
   type: types.setWindow,
   payload: window,
 });
-export const toggleWindowActive = (window) => {
-  console.log(window);
-
-  return {
-    type: types.toggleWindowActive,
-    payload: window,
-  };
-};
+export const toggleWindowActive = (window) => ({
+  type: types.toggleWindowActive,
+  payload: window,
+});
