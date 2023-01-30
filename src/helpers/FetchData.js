@@ -1,5 +1,5 @@
 export const FetchData = async (name, email, message) => {
-  const url = "https://handleemailsportafolio.herokuapp.com/send-email";
+  const url = "https://receiver-email-portfolio.vercel.app/send-email";
   const res = await fetch(url, {
     method: "POST",
     headers: {

@@ -25,7 +25,7 @@ const WindowInfo = () => {
           </ul>
         </div>
       </div>
-      <small className="copyrigth">@Copyrigth 2021</small>
+      <small className="copyrigth">@Copyrigth 2023</small>
     </>
   );
 };

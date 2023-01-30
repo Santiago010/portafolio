@@ -34,7 +34,7 @@ const WindowAboutMe = () => {
           <span className="iconify" data-icon="bx:bxl-linkedin"></span>
         </a>
         <a
-          href="https://firebasestorage.googleapis.com/v0/b/portafolio-f1e48.appspot.com/o/assets%2FCV.pdf?alt=media&token=a8f76f37-32e8-4ae9-9a31-79467467e488"
+          href="https://firebasestorage.googleapis.com/v0/b/portafolio-f1e48.appspot.com/o/assets%2FCV.pdf?alt=media&token=ca045858-9a2c-4d07-8ba1-437c51a58ab8"
           target="_blank"
           rel="noreferrer"
           className="windowAboutMe__links"

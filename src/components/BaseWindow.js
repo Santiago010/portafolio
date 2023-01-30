@@ -95,7 +95,10 @@ const BaseWindow = ({ children, windowToShow }) => {
             className="basewindow__actions actions-close"
             onClick={(ev) => handleClose(ev, windowToShow)}
           >
-            X
+            <span
+              className="iconify icon__square"
+              data-icon="material-symbols:close"
+            ></span>
           </div>
           <div
             className="basewindow__actions actions-resize"
