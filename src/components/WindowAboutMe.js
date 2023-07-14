@@ -5,7 +5,7 @@ const WindowAboutMe = () => {
     <>
       <img
         src={
-          "https://firebasestorage.googleapis.com/v0/b/portafolio-f1e48.appspot.com/o/assets%2FMy.jpg?alt=media&token=1279d843-3b43-42f4-9c2c-60990b35ce1b"
+          "https://firebasestorage.googleapis.com/v0/b/portafolio-f1e48.appspot.com/o/assets%2FMY.jpg?alt=media&token=57a327f8-3fab-4340-97d2-b27b447970e0"
         }
         alt=""
         className="windowAboutMe__image"
@@ -34,7 +34,7 @@ const WindowAboutMe = () => {
           <span className="iconify" data-icon="bx:bxl-linkedin"></span>
         </a>
         <a
-          href="https://firebasestorage.googleapis.com/v0/b/portafolio-f1e48.appspot.com/o/assets%2FCV.pdf?alt=media&token=ca045858-9a2c-4d07-8ba1-437c51a58ab8"
+          href="https://firebasestorage.googleapis.com/v0/b/portafolio-f1e48.appspot.com/o/assets%2FCV.pdf?alt=media&token=14f572d6-07e4-4784-94da-591492957fc9"
           target="_blank"
           rel="noreferrer"
           className="windowAboutMe__links"
