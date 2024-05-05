@@ -13,8 +13,8 @@ const WindowAboutMe = () => {
       <h2>!Hola a todos!</h2>
       <h1>Soy Santiago</h1>
       <p>
-        Un Front-end Developer que le fascina ser perspicaz con los detalles de
-        un proyecto
+        Un Ingeniero de software que le fascina ser perspicaz con los detalles
+        de un proyecto
       </p>
       <nav className="windowAboutMe__nav">
         <a
@@ -34,7 +34,7 @@ const WindowAboutMe = () => {
           <span className="iconify" data-icon="bx:bxl-linkedin"></span>
         </a>
         <a
-          href="https://firebasestorage.googleapis.com/v0/b/portafolio-f1e48.appspot.com/o/assets%2FCV.pdf?alt=media&token=14f572d6-07e4-4784-94da-591492957fc9"
+          href="https://firebasestorage.googleapis.com/v0/b/portafolio-f1e48.appspot.com/o/assets%2FCV.pdf?alt=media&token=5a0329d9-c36a-408f-a830-e22e11de9171"
           target="_blank"
           rel="noreferrer"
           className="windowAboutMe__links"

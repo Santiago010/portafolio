@@ -1,5 +1,5 @@
 import React from "react";
-import Background from "../assets/Bacground.jpg";
+import Background from "../assets/Background.jpeg";
 
 const WindowInfo = () => {
   return (
@@ -25,7 +25,7 @@ const WindowInfo = () => {
           </ul>
         </div>
       </div>
-      <small className="copyrigth">@Copyrigth 2023</small>
+      <small className="copyrigth">@Copyrigth 2024</small>
     </>
   );
 };

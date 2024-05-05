@@ -31,18 +31,34 @@ const WindowProjects = () => {
               ></span>
               ver projecto
             </a>
-            <a
-              target="_blank"
-              className="windowProjects__links"
-              href={github}
-              rel="noreferrer"
-            >
-              <span
-                className="iconify"
-                data-icon="akar-icons:github-fill"
-              ></span>
-              ver codigo
-            </a>
+
+            {github === "NULL" ? (
+              <a
+                target="_blank"
+                className="windowProjects__links"
+                href="https://github.com/Santiago010"
+                rel="noreferrer"
+              >
+                <span
+                  className="iconify"
+                  data-icon="akar-icons:github-fill"
+                ></span>
+                ver codigo
+              </a>
+            ) : (
+              <a
+                target="_blank"
+                className="windowProjects__links"
+                href={github}
+                rel="noreferrer"
+              >
+                <span
+                  className="iconify"
+                  data-icon="akar-icons:github-fill"
+                ></span>
+                ver codigo
+              </a>
+            )}
           </nav>
         </div>
       ))}
